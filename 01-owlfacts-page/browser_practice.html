@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Practicing What I've learned</title> <!-- or more accurately, what I've reviewed -->
+		<link rel="stylesheet" href="styles.css"> <!-- Our CSS file we use to make this actually look decent -->
+	</head>
+	<body>
+		<div class="container">
+			<div class="content">
+				<div class="title"> <!-- Make look better -->
+					<p class="title"><strong>FUN OWL FACTS!</strong></p>
+				</div>
+
+				<!-- A slideshow of our favorite owl photos-->
+				<div class="slideshow">
+					<!-- our owl photos are in ./owls -->
+					<img id="slideshow" src="" alt="Image not found!" height="600"/>
+				</div>
+
+				<!-- Owl Facts section displaying information about owls -->
+				<div class="owlfacts">
+					<p id="owlfacts" class="fact"></p>
+					<button class="btn" type='button' id="pausebutton" onclick="toggleCycle()"></button>
+				</div>
+				<br>
+
+				<!-- We can search for a specific owl fact by number -->
+				<form onsubmit="searchOwlFacts();" class="my-form">
+					<label for="factSlider">Select Fact Sheet</label>
+					<input type="range" min="0" max="0" id="factslider" name="factslider" value="0" step="1">
+					<button class="btn" type='button' onclick="searchOwlFacts()">Search</button>
+				</form>
+			</div>
+
+			<div class="footer">
+				<h4>Created using what I know about HTML and Javascript(And a little bit of stiff I already knew)</h4>
+			</div>
+		</div>
+	</body>
+	<script src="hoot.js"></script>
+</html>
