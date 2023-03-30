@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>WiltOS Skilltree Generator</title>
+		<link rel="stylesheet" href="skill-page.css">
+	</head>
+	<body>
+		<h1>INSTRUCTIONS:</h1>
+		<p id="instructions"></p>
+		<br>
+		<div id="creation">
+			<form>
+				<h3>Basic Info</h3>
+				<label for="name">Name: </label>
+				<input type="text" name="name" value="">
+				<br>
+
+				<label for="description">Description: </label>
+				<input type="text" name="description" value="">
+				<br>
+
+				<label for="icon">Icon: </label>
+				<input type="text" name="icon">
+				<br>
+
+				<h3>Color</h3>
+				<input type="color" name="color">
+				<br>
+
+				<h3>Tiers</h3>
+				<input type="number" name="tiers" min="1" steps="1" value="1">
+				<br>
+
+				<h3>Usergroups</h3>
+				<button class="btn" type='button' onclick="addUsergroup()">Add Group</button>
+				<div id="usergroups">
+					<!-- Usergroups allowed to use the skill tree -->
+				</div>
+				<br>
+
+				<h3>Job Restrictions</h3>
+				<button class="btn" type='button' onclick="addJob()">Add Job</button>
+				<div id="jobRestricted">
+					<!-- Jobs allowed to use the skill tree here-->
+				</div>
+				<br>
+
+				<h3>Skill List</h3>
+				<button class="btn" type='button' onclick="addTier()">Add Tier</button>
+				<div id="tier-list">
+					<!-- tiers get placed here -->
+					<div class="tier-box" id="tier-1">
+						<!-- Skills get placed here -->
+						<div class="skill-box" id="skill-1-1">
+							<!-- name input-->
+							<!-- description input-->
+							<!-- icon input-->
+							<!-- point requirement input-->
+							<!-- requirements input-->
+							<!-- lockouts input-->
+							<!-- onPlayerSpawn function input-->
+							<!-- onPlayerDeath function input-->
+							<!-- onSaberDeploy function input-->
+						</div>
+					</div>
+				</div>
+				<br>
+
+				<button class="btn" type='button' onclick="generateSkilltree()">Generate Skilltree</button>
+			</form>
+		</div>
+		<br>
+
+		<p id="instructions-output"></p>
+		<br>
+
+		<textarea id="output" rows="10" cols="150"></textarea>
+		<br>
+
+		<div id="visualization">
+			<!-- A visual representation of the skill tree will be here -->
+		</div>
+	</body>
+	<script src="skill-page.js"></script>
+</html>
